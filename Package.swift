@@ -21,7 +21,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "WWDC23ResourcesSwiftPackage",
-            dependencies: [], path: "Sources", resources: [
+            dependencies: [], resources: [
                 .copy("Resources"),
                 .copy("Resources/bensound-theduel.mp3"),
                 .copy("Resources/bouyShip.wav"),
