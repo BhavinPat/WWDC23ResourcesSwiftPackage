@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "wwdc23resourcesswiftpackage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/BhavinPat/WWDC23ResourcesSwiftPackage",
+      "state" : {
+        "branch" : "main",
+        "revision" : "eb243e980f1ebe9ff066eb1abcd43d7cb96d20be"
+      }
+    }
+  ],
+  "version" : 2
+}

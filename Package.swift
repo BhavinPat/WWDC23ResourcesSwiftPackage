@@ -5,6 +5,7 @@ import PackageDescription
 
 let package = Package(
     name: "WWDC23ResourcesSwiftPackage",
+    platforms: [.iOS(.v15)],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
@@ -20,7 +21,22 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "WWDC23ResourcesSwiftPackage",
-            dependencies: []),
+            dependencies: [], path: "Sources", resources: [
+                .process("Resources/bensound-theduel.mp3"),
+                .process("Resources/bouyShip.wav"),
+                .process("Resources/chalkboard-se-bold.ttf"),
+                .process("Resources/chalkboard-se-regular.ttf"),
+                .process("Resources/collectCoin.wav"),
+                .process("Resources/collectStar.wav"),
+                .process("Resources/continiousSmoke.sks"),
+                .process("Resources/fire.sks"),
+                .process("Resources/FireParticles.sks"),
+                .process("Resources/GameScene.sks"),
+                .process("Resources/PlayerExplosion.sks"),
+                .process("Resources/shipFireBullet.wav"),
+                .process("Resources/smoke.sks"),
+                .process("Resources/spark.sks"),
+            ]),
         .testTarget(
             name: "WWDC23ResourcesSwiftPackageTests",
             dependencies: ["WWDC23ResourcesSwiftPackage"]),
