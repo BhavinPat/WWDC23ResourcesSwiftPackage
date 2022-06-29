@@ -34,4 +34,7 @@ public class MusicPlayer {
         audioPlayer.stop()
     }
 }
+extension Bundle {
+    public static var wwdc23: Bundle = .module
+}
 

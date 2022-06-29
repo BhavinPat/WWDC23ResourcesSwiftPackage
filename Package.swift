@@ -36,10 +36,10 @@ let package = Package(
                 .copy("Resources/PlayerExplosion.sks"),
                 .copy("Resources/shipFireBullet.wav"),
                 .copy("Resources/smoke.sks"),
-                .copy("Resources/spark.sks"),
+                .copy("Resources/spark.sks")
             ]),
         .testTarget(
             name: "WWDC23ResourcesSwiftPackageTests",
             dependencies: ["WWDC23ResourcesSwiftPackage"]),
-    ]
+    ], swiftLanguageVersions: [.v5]
 )
