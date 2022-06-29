@@ -103,22 +103,8 @@ public class GameScene: SKScene, SKPhysicsContactDelegate {
         isEShipDead.append(false)
         EShipHealth.append(50)
         shipZRotation.append(0)
-        fgre = WWDC22_Resources_Package.init()
-        //fireDeadShip.append(fgre.fire!)
-        //let gg = Bundle.module.url(forResource: "fire", withExtension: "sks")
-        let kk = Bundle.module.path(forResource: "fire", ofType: "sks")
-        //let gg = NSURL(fileURLWithPath: kk)
-        let data1 = NSData(contentsOf: kk)
-        do {
-            let decodedData = try NSKeyedUnarchiver.unarchivedObject(ofClass: <#T##NSCoding.Protocol#>, from: <#T##Data#>)
-            guard let data1 = decodedData as? SKSpriteNode else {
-                return
-            }
-        } catch {
-            
-        }
-        
-        fireDeadShip.append(data1)
+        fgre = WWDC23ResourcesSwiftPackage()        //fireDeadShip.append(fgre.fire!)
+        fireDeadShip.append(SKEmitterNode(fileNamed: "fire")!)
         isTimerActive.append(false)
         EShip.append(enemyShip)
         shipNum += 1

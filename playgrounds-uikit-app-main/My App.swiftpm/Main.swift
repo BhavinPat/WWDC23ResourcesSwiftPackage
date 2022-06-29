@@ -1,7 +1,7 @@
 import Foundation
 import SpriteKit
 import UIKit
-import WWDC22_Resources_Package
+import WWDC23ResourcesSwiftPackage
 //import Ship_Destroyer_Sources
 
 public class GameViewController: UIViewController {

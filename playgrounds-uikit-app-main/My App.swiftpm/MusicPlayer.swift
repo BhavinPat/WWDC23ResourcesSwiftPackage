@@ -15,7 +15,8 @@ public class MusicPlayer {
         if let bundle = Bundle.module.path(forResource: "bensound-theduel", ofType: "mp3") {
             let backgroundMusic = NSURL(fileURLWithPath: bundle)
             do {
-                audioPlayer = try AVAudioPlayer(contentsOf:backgroundMusic as URL)
+                //audioPlayer = try AVAudioPlayer(contentsOf:backgroundMusic as URL)
+                audioPlayer = try AVAudioPlayer(
                 guard let audioPlayer = audioPlayer else { return }
                 audioPlayer.numberOfLoops = -1
                 audioPlayer.prepareToPlay()
