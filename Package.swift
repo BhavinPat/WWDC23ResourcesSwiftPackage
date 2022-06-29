@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-let package = Package(
+public let package = Package(
     name: "WWDC23ResourcesSwiftPackage",
     platforms: [.iOS(.v15), .macCatalyst(.v14), .macOS(.v10_14)],
     products: [

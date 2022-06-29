@@ -97,7 +97,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(enemyShip)
         //let encoder = NSCoder()
         do {
-            let cert = try! Data(contentsOf:Bundle.module1.url(forResource: "fire", withExtension: "sks")!)
+            let cert = try! Data(contentsOf:Bundle.resource.url(forResource: "", withExtension: "")!)
             //encoder.encode(cert, forKey: "fire.sks")
             //let data = encoder.decodeObject(forKey: "fire.sks") as! Data
             let decodedData = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(cert)
