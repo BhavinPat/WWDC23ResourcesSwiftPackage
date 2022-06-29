@@ -95,7 +95,18 @@ public class GameScene: SKScene, SKPhysicsContactDelegate {
         enemyShip.physicsBody!.contactTestBitMask = 0x1 << 2
         enemyShip.physicsBody!.collisionBitMask = Collision.ship
         addChild(enemyShip)
-        EShipSmoke.append(SKEmitterNode(fileNamed: "continiousSmoke.sks")!)
+        //let encoder = NSCoder()
+        do {
+            let cert = try! Data(contentsOf:Bundle.module1.url(forResource: "fire", withExtension: "sks")!)
+            //encoder.encode(cert, forKey: "fire.sks")
+            //let data = encoder.decodeObject(forKey: "fire.sks") as! Data
+            let decodedData = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(cert)
+            if let fire = decodedData as? SKEmitterNode {
+                EShipSmoke.append(fire)
+            }
+        } catch {
+            print(error)
+        }
         let timer123 = Timer()
         isDamagedE.append(false)
         enemyTimers.append(timer123)
@@ -104,7 +115,7 @@ public class GameScene: SKScene, SKPhysicsContactDelegate {
         EShipHealth.append(50)
         shipZRotation.append(0)
         fgre = WWDC23ResourcesSwiftPackage()        //fireDeadShip.append(fgre.fire!)
-        fireDeadShip.append(SKEmitterNode(fileNamed: "fire.sks")!)
+        fireDeadShip.append(SKEmitterNode(fileNamed: "fire")!)
         isTimerActive.append(false)
         EShip.append(enemyShip)
         shipNum += 1

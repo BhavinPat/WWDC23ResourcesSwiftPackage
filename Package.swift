@@ -22,6 +22,7 @@ let package = Package(
         .target(
             name: "WWDC23ResourcesSwiftPackage",
             dependencies: [], path: "Sources", resources: [
+                .copy("Resources"),
                 .copy("Resources/bensound-theduel.mp3"),
                 .copy("Resources/bouyShip.wav"),
                 .copy("Resources/chalkboard-se-bold.ttf"),
